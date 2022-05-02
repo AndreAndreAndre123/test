@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genres",
+  "info": {
+    "singularName": "genre",
+    "pluralName": "genres",
+    "displayName": "genre"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "romantik": {
+      "type": "string"
+    },
+    "humor": {
+      "type": "string"
+    },
+    "horror": {
+      "type": "text"
+    },
+    "barnvenlig": {
+      "type": "string"
+    },
+    "fantasy": {
+      "type": "string"
+    },
+    "scifi": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    }
+  }
+}

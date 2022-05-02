@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <p class="profile-user-header hidden">Profile</p>
+            <h2 class="book-ducks">Book ducks</h2>
+       <!--  <div>
+            <p class="profil hidden">profil</p>
+        </div> -->
+        <div class="login-register-div">
+            <p class="login-user-header">Log in</p>
+            <p class="register-user-header">Register</p>
+          
+            <p class="addBook-header hidden">Add Book</p>
+            <p class="logout-user-header hidden">Log out</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="register hidden"> 
+            <h2>Register Here</h2>
+            <div>
+                <label for="registerUsername" class="label">Användarnamn</label>
+                <input type="text" id="registerUsername" required placeholder="Example: testman">
+            </div>
+
+            <div>
+                <label for="registerEmail" class="label">E-postadress</label>
+                <input type="email" id="registerEmail" required placeholder="Example: test@gmail.com">
+            </div>
+
+            <div>
+                <label for="registerPassword" class="label">Lösenord</label>
+                <input type="password" id="registerPassword" required placeholder="Example: Test1234">
+            </div>
+          <!--   <button onclick="register()">Registrera</button> -->
+            <button class="hbtn hb-fill-right-bg" onclick="register()">Register</button>
+            
+        </div>
+    
+
+    <div class="login-container hidden">
+        
+            <h2>Log in</h2>
+            <div>
+                <label for="identifier">Inloggning</label>
+                <input type="text" id="identifier" placeholder="Username">
+                
+            </div>
+            <div>
+                <label for="password">Lösenord</label>
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="login()" class="hbtn hb-fill-right-bg">Log in</button>
+            </div>
+            
+        
+    </div>
+    
+    <div class="add-book hidden">
+        <input type="text" class="book-title book-input-style" placeholder="title"   maxlength = "28">
+        <input type="text" class="book-author book-input-style" placeholder="author"   maxlength = "28">
+
+
+   <!--      <div class="book-type-div">
+            <div>
+                <label for="text-book">text book</label>
+                <input type="radio"  name="book-type" id="text-book" value="text" checked>
+            </div>
+
+            <div>
+                <label for="audio-book">audio book</label>
+                <input type="radio"  name="book-type" id="audio-book" value="audio">
+            </div>
+        </div> -->
+        <div class="container">
+            <form>
+              <label>
+                <input type="radio" name="book-type" id="text-book" value="text" checked/>
+                <span>Written Book</span>
+              </label>
+              <label>
+                <input type="radio" name="book-type" id="audio-book" value="audio"/>
+                <span>Audio Book</span>
+              </label>
+            </form>
+          </div>
+
+          <label for="book-lenght-id">Add Book Lenght</label>
+        <input type="number" class="book-lenght book-input-style" id="book-lenght-id" placeholder="book lenght in pages"   max="28" required>
+        
+        <label for="book-release-id">Add Release year</label>
+        <input type="number" class="book-release book-input-style" id="book-release-id" placeholder="Release year"   max="28" required>
+
+        <label for="productImage" class="productImage-style-lable" >Add book cover</label>
+        <input type="file" id="productImage" class="productImage-style">
+
+        <div class="book-genre">
+            
+        </div>
+
+    
+ <!--        <label for="book-rating">Rating:</label>
+        <select name="book-rating" id="book-rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10" selected>10</option>
+        </select> -->
+        <div class="selectdiv">
+            <label for="book-rating">Rating:</label>
+            <select name="book-rating" id="book-rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                </select>
+            
+          </div>
+
+        <button id="add-book-btn" class="hbtn hb-fill-right-bg">Lägg till produkt</button>
+    </div>
+
+
+
+    <div class="all-book-container">
+        <h2>All Books For Rent</h2>
+        <div class="all-book">
+
+        </div>
+       
+        
+    </div> 
+
+
+    <div class="profile hidden">
+
+
+    </div>
+
+
+    
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
